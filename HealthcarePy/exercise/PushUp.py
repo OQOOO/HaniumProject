@@ -4,8 +4,13 @@ import mediapipe as mp
 import numpy as np
 import requests
 import json
+
 mp_drawing=mp.solutions.drawing_utils
 mp_pose=mp.solutions.pose
+cap = cv2.VideoCapture(0)
+# Pushup counter variables
+counter = 0 
+position = None
 
 def calculate_angle(a,b,c):
     a = np.array(a) # First
@@ -20,11 +25,7 @@ def calculate_angle(a,b,c):
         
     return angle 
 
-cap = cv2.VideoCapture(0)
 
-# Pushup counter variables
-counter = 0 
-position = None
 
 # Setup mediapipe instance
 with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
