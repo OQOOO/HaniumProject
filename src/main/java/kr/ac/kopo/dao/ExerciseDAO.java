@@ -17,7 +17,7 @@ public class ExerciseDAO {
 	
 	public List<ExerciseVO> getExerciseData(String uid) {
 		
-		String sql = "SELECT * FROM EXERCISE WHERE USER_ID = ? ";
+		String sql = "SELECT * FROM EXERCISE WHERE USER_ID = ? ORDER BY E_NO DESC ";
 		JdbcTemplate template = new JdbcTemplate();
 		template.setDataSource(dataSource);
 		List<ExerciseVO> exList = template.query(sql, new BeanPropertyRowMapper<>(ExerciseVO.class), uid);

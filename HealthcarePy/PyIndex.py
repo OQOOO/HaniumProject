@@ -8,7 +8,7 @@ from PyQt5 import uic
 form_class = uic.loadUiType("untitled.ui")[0]
 
 # 화면을 띄우는데 사용되는 Class 선언
-class WindowClass(QDialog, form_class) :
+class WindowClass2(QDialog, form_class) :
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
@@ -39,6 +39,7 @@ class WindowClass(QDialog, form_class) :
     '''
     def startDumbbelFuc(self):
         from exercise import Dumbbell
+        Dumbbell.start()
 
     def startPushUpFuc(self):
         from exercise import PushUp
@@ -46,6 +47,6 @@ class WindowClass(QDialog, form_class) :
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv) 
-    myWindow = WindowClass() 
+    myWindow = WindowClass2() 
     myWindow.show()
     app.exec_()

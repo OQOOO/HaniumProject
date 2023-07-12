@@ -1,7 +1,7 @@
 package kr.ac.kopo.vo;
 
 public class UserVO {
-	private String id;
+	private String userId;
 	private String password;
 	private String email;
 	private String name;
@@ -9,11 +9,11 @@ public class UserVO {
 	private String birthDate;
 	private String addr;
 	
-	public String getId() {
-		return id;
+	public String getUserId() {
+		return userId;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setUserId(String id) {
+		this.userId = id;
 	}
 	public String getPassword() {
 		return password;
@@ -54,7 +54,7 @@ public class UserVO {
 	
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", password=" + password + ", email=" + email + ", name=" + name + ", phoneNum="
+		return "UserVO [id=" + userId + ", password=" + password + ", email=" + email + ", name=" + name + ", phoneNum="
 				+ phoneNum + ", birthDate=" + birthDate + ", addr=" + addr + "]";
 	}
 	

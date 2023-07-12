@@ -27,6 +27,9 @@
 <!-- 	<bean id="newsDAO" class="kr.ac.kopo.dao.NewsDAO" /> -->
  	<bean id="exerciseDAO" class="kr.ac.kopo.dao.ExerciseDAO" />
  	<bean id="exerciseVO" class="kr.ac.kopo.vo.ExerciseVO" />
+ 	
+ 	<bean id="userDAO" class="kr.ac.kopo.dao.UserDAO" />
+ 	<bean id="userVO" class="kr.ac.kopo.vo.UserVO" />
 
    	<!-- Controller -->
    	
